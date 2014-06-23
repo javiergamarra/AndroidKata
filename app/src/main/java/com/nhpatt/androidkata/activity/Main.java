@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Main extends Activity implements View.OnClickListener {
+public class Main extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
