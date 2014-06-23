@@ -19,19 +19,6 @@
         <activity android:name=".SecondActivity"/>
         <activity android:name=".AirplaneModeActivity"/>
 
-
-        <receiver android:name="com.nhpatt.androidkata.receiver.OtherReceiver">
-            <intent-filter>
-                <action android:name="com.nhpatt.OtherReceiver"/>
-            </intent-filter>
-        </receiver>
-
-        <receiver android:name="com.nhpatt.androidkata.receiver.AirplaneModeReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.AIRPLANE_MODE"/>
-            </intent-filter>
-        </receiver>
-
     </application>
 
 </manifest>

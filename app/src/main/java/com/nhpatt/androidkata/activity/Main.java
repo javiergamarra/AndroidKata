@@ -15,41 +15,16 @@ import android.widget.Toast;
 
 public class Main extends Activity implements View.OnClickListener {
 
-    public static final String COM_NHPATT_SAME_ACTIVITY = "com.nhpatt.sameActivity";
-    public static final String COM_NHPATT_OTHER_RECEIVER = "com.nhpatt.OtherReceiver";
-
-    private BroadcastReceiver receiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            ((Button) findViewById(R.id.buttonSameActivity)).setText("Broadcast clicked!");
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        findViewById(R.id.buttonSameActivity).setOnClickListener(this);
-        findViewById(R.id.buttonOtherActivity).setOnClickListener(this);
 
         //FIXME why use a broadcast receiver?
         //FIXME why use a broadcast receiver inside an activity?
         //FIXME Advantages vs...
         //TODO goAsync() ?
         //TODO uses in globalmobile...
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        LocalBroadcastManager.getInstance(this).registerReceiver(receiver, new IntentFilter(COM_NHPATT_SAME_ACTIVITY));
-    }
-
-    @Override
-    protected void onPause() {
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(receiver);
-        super.onPause();
     }
 
     @Override
@@ -71,13 +46,4 @@ public class Main extends Activity implements View.OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.buttonSameActivity) {
-            LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(COM_NHPATT_SAME_ACTIVITY));
-        } else {
-            sendBroadcast(new Intent(COM_NHPATT_OTHER_RECEIVER));
-        }
-
-    }
 }
