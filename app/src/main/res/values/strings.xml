@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidKata</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="otherActivity">Send Broadcast, other activity</string>
+    <string name="sameActivity">Send Broadcast, same activity</string>
+    <string name="titleSecondActivity">Welcome to the second activity!</string>
+    <string name="airplane_mode">Airplane Mode</string>
+
+</resources>
