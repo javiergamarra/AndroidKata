@@ -16,3 +16,7 @@ hs_err_pid*
 /.idea/workspace.xml
 .DS_Store
 /build
+.idea/misc.xml
+AndroidKata.iml
+build.gradle
+gradle/wrapper/gradle-wrapper.properties
