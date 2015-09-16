@@ -9,11 +9,13 @@ android {
         targetSdkVersion 19
         versionCode 1
         versionName '1.0'
-        testInstrumentationRunner 'com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner'
+        //Changed test unit to JUnit.
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            runProguard false
+            //runProward was deprecated and no longer used.
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -22,8 +24,13 @@ android {
 }
 
 dependencies {
-    androidTestCompile files('libs/espresso-1.1-bundled.jar')
+
+    // Espresso dependencies (from espresso Setup Instructions https://code.google.com/p/android-test-kit/wiki/EspressoSetupInstructions).
+    compile 'com.android.support:support-annotations:22.2.0'
+    androidTestCompile 'com.android.support.test:runner:0.3'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
+
     compile 'com.android.support:support-v4:19.0.0'
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/espresso-1.1-bundled.jar')
+
 }
