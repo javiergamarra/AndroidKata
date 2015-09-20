@@ -1,12 +1,12 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
     defaultConfig {
         applicationId 'com.nhpatt.androidkata'
-        minSdkVersion 19
-        targetSdkVersion 19
+        minSdkVersion 16
+        targetSdkVersion 23
         versionCode 1
         versionName '1.0'
         //Changed test unit to JUnit.
@@ -26,11 +26,10 @@ android {
 dependencies {
 
     // Espresso dependencies (from espresso Setup Instructions https://code.google.com/p/android-test-kit/wiki/EspressoSetupInstructions).
-    compile 'com.android.support:support-annotations:22.2.0'
-    androidTestCompile 'com.android.support.test:runner:0.3'
+    compile 'com.android.support:support-annotations:23.0.1'
+    androidTestCompile 'com.android.support.test:runner:0.4'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
 
-    compile 'com.android.support:support-v4:19.0.0'
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
 }
