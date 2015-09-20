@@ -20,3 +20,6 @@ hs_err_pid*
 AndroidKata.iml
 build.gradle
 gradle/wrapper/gradle-wrapper.properties
+
+.idea/*
+*.iml
