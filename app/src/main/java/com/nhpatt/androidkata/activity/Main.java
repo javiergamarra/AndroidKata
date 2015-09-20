@@ -44,8 +44,7 @@ public class Main extends Activity implements View.OnClickListener {
                 break;
             case R.id.buttonOtherActivity:
                 //Changing Activity when clicked.
-                Intent intent = new Intent(this,SecondActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(this, SecondActivity.class));
                 break;
             default:
         }
