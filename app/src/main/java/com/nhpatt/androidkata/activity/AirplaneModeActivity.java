@@ -3,7 +3,7 @@ package com.nhpatt.androidkata.activity;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class AirplaneModeActivity extends Activity{
+public class AirplaneModeActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
